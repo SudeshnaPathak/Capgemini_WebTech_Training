@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*Descendent Selector: To target both direct and indirect children*/
+        div h1{
+            color: red;
+        }
+        div h2{
+            color: chartreuse;
+        }
+        /* Child Selector: To target only direct children */
+        div > h1{
+            color: pink;
+        }
+
+        div > h2{
+            color: orange;
+        }
+        /* Adjacent Sibling Selector: To target the immediate next element */
+        div + h1{
+            color: purple;
+        }
+
+        /* General Sibling Selector: To target Specific type of siblings that share the same parent */
+        div ~ h1{
+            color: tomato;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>h1: direct Children of div</h1>
+        <h2>h2: direct Children of div</h2>
+        <article>
+            <h1>
+                h1: Indirect Children of div 
+            </h1>
+            <h2>
+                h2: Indirect Children of div 
+            </h2>
+        </article>
+    </div>
+    <h1>Adjacent to div</h1>
+    <p>Lorem ipsum dolor sit amet.</p>
+    <h1>Lorem ipsum dolor sit amet.</h1>
+    <p>Lorem ipsum dolor sit amet.</p>
+</body>
+</html>
