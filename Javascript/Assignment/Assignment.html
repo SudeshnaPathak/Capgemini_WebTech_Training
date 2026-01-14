@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Factorial of a Number
+        function factorial(n){
+            let fact = 1;
+            for(let i = 1 ; i <= n ; i++){
+                fact = fact * i;
+            }
+            return fact;
+        }
+
+        console.log(`Factorial of 5 is: ${factorial(5)}`);
+
+        //Fibonacci Series up to n terms
+        function fibonacci(n)
+        {
+            let x = 0;
+            let y = 1;
+            let arr = [];
+            arr.push(x , y);
+            for(let i = 2 ; i < n ; i++)
+            {
+                let z = x + y;
+                arr.push(z);
+                x = y;
+                y = z;
+            }
+            return arr;
+        }
+        console.log(`Fibonacci Series up to 7 terms: ${fibonacci(7)}`);
+
+        //Check prime number
+        function isPrime(n){
+            if(n <= 1) return false;
+            for(let i = 2 ; i <= Math.sqrt(n) ; i++)
+            {
+                if(n % i == 0) return false;
+            }
+            return true;
+        }
+
+        console.log(`Is 11 a prime number? : ${isPrime(11)}`);
+        console.log(`Is 15 a prime number? : ${isPrime(15)}`);
+
+        //Perfect number
+        let sum = 1;
+        function isPerfect(n){
+            for(let i = 2 ; i <= Math.sqrt(n) ; i++){
+                if(n % i == 0){
+                    sum += i;
+                    if(i != n / i){
+                        sum += n / i;
+                    }
+                }
+            }
+            console.log((sum == n) ? `${n} is a Perfect Number` : `${n} is not a Perfect Number`);
+        }
+
+        isPerfect(28);
+        isPerfect(12);
+
+        function ArmStrong(n){
+            let len = n.toString().length;
+            let sum = 0;
+            let temp = n;
+            while(n > 0){
+                let digit = n % 10;
+                sum += Math.pow(digit , len);
+                n = parseInt(n / 10);
+            }
+            console.log((sum == temp) ? `${temp} is an Armstrong Number` : `${temp} is not an Armstrong Number`);
+        }
+
+        ArmStrong(1634);
+        ArmStrong(123);
+
+        function Disarium(n)
+        {
+            let l = n.toString().length;
+            let sum = 0;
+            let temp = n;
+            while(temp > 0)
+            {
+                let r = temp % 10;
+                sum += Math.pow(r , l);
+                l--;
+                temp = parseInt(temp / 10);
+            }
+            console.log((sum == n) ? `${n} is a Disarium Number` : `${n} is not a Disarium Number`);
+        }
+
+        Disarium(175);
+        Disarium(89);
+        Disarium(123);
+
+        function ReverseNumber(n)
+        {
+            let sum = 0;
+            while(n > 0)
+            {
+                let r = n % 10;
+                sum = (sum * 10) + r;
+                n = parseInt(n / 10);
+            }
+            return sum;
+        }
+        console.log(`Reverse of 1234 is: ${ReverseNumber(1234)}`);
+
+        function Palindrome(n)
+        {
+            console.log((n == ReverseNumber(n)) ? `${n} is a Palindrome` : `${n} is not a Palindrome`);
+        }
+        Palindrome(121);
+        Palindrome(123);
+
+        function noOfDigits(n)
+        {
+            let c = 0;
+            while(n > 0)
+            {
+                c++;
+                n = parseInt(n / 10);
+            }
+            return c;
+        }
+        console.log(`Number of digits in 12345 is: ${noOfDigits(12345)}`);
+
+        function sumOfDigits(n)
+        {
+            let sum = 0;
+            while(n > 0)
+            {
+                let r = n % 10;
+                sum += r;
+                n = parseInt(n / 10);
+            }
+            console.log(`Sum of digits of 1234 is: ${sum}`);
+        }
+
+        sumOfDigits(1234);
+
+    </script>
+</body>
+</html>
