@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <div>
+            <label for="uname">username:</label>
+            <input type="text" name="uname" id="uname" pattern="[a-zA-Z]{3,12}" title="name field consists of atleast 3 characters and atmost 12 characters">
+            <span id="unameError"></span> <!-- For displaying error message -->
+        </div>
+        <div>
+            <label for="pnumber">phone number1:</label>
+            <input type="tel" name="pnumber" id="pnumber" pattern="[0-9]{10}" title="Phone number feild should consist of 10 characetrs">
+            <span id="pError"></span>
+        </div>
+         <div>
+            <label for="pnumber">phone number2:</label>
+            <input type="tel" name="pnumber" id="pnumber" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" title="Phone number in the format 123-456-7890">
+            <span id="pError"></span>
+        </div>
+        <div>
+            <button type="submit" id="btn">submit</button>
+        </div>
+    </form>
+</body>
+</html>

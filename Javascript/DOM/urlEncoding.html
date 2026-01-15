@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let text = "hi hello! @js"
+        let encode = encodeURIComponent(text); // encodes special characters as well like ! @ etc
+        console.log(encode);
+        let encode1 = encodeURI(text); // does not encode special characters like ! @ etc
+        console.log(encode1);
+        let decode = decodeURIComponent(encode);
+        console.log(decode);
+        let decode1 = decodeURI(encode1);
+        console.log(decode1);
+    </script>
+</body>
+</html>

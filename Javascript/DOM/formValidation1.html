@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./formValidation.js" defer></script>
+</head>
+<body>
+    <form action="" method="post">
+        <div>
+            <label for="uname">username:</label>
+            <input type="text" name="uname" id="uname" >
+            <span id="unameError"></span> <!-- For displaying error message -->
+        </div>
+        <br>
+         <div>
+            <label for="pnumber">phone number:</label>
+            <input type="tel" name="pnumber" id="pnumber" >
+            <span id="pError"></span>
+        </div>
+        <div>
+            <button type="submit" id="btn">submit</button>
+        </div>
+    </form>
+</body>
+</html>
